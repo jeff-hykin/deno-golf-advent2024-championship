@@ -14,7 +14,9 @@ function part1(input: string): number {
   const l1 = items.map((pair) => pair[0]).sort((a, b) => a - b);
   const l2 = items.map((pair) => pair[1]).sort((a, b) => a - b);
   const pairs = zip(l1, l2);
-  return pairs.map(([a, b]) => Math.abs(a - b)).reduce((a, b) => a + b, 0);
+  return pairs
+    .map(([a, b]) => Math.abs(a - b))
+    .reduce((a, b) => a + b, 0);
 }
 
 function part2(input: string): number {
