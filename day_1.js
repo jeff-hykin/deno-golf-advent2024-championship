@@ -1,9 +1,4 @@
-
-var p=(i,s=0)=>(
-  i=i.trim().split(/\s+/g).map((e,j)=>(p=j)&1?–e:+e).sort(),
-  i.slice(p/2).map((e,j)=>s+=Math.abs(e,i.at(-j)),
-  s
-)
+var p=(i,s=0)=>(i=i.trim().split(/\s+/g).map((e,j)=>(p=j)&1?-e:e).sort(),i.slice(0,++p/2).map((e,j)=>s+=Math.abs(-i[j+p/2]-e)),s)
 
 function part2(input: string): number {
   const items = parse(input);
